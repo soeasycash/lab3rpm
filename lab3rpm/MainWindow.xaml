@@ -1,0 +1,39 @@
+﻿<Window x:Class="lab3rpm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab3rpm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label Content="Введите сторону A"/>
+            <TextBox x:Name="SideATextBox"></TextBox>
+            <Label Content="Введите сторону B"/>
+            <TextBox x:Name="SideBTextBox"></TextBox>
+            <Label Content="Введите угол между сторон"/>
+            <TextBox x:Name="AngleTextBox"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Button Click="Button_Click">Прямоугольный треугольник</Button>
+            <Button Click="Button_Click2">Равнобедренный треугольник</Button>
+            <Button Click="Button_Click3">Равносторонний треугольник</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Результаты:"/>
+            <Label x:Name="AreaResultLabel"></Label>
+            <Label x:Name="PerimeterResultLabel"></Label>
+        </StackPanel>
+    </Grid>
+</Window>
